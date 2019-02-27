@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100');
+
+:root {
+  --header-bg: linear-gradient(180deg, rgba(84,103,103,0.80015756302521) 58%, rgba(158,158,158,0.0) 100%);
+  --main-text: #ccc;
+  --main-text-dark: #452c0f;
+  --link-color: #fa8c1a;
+  --accent-color: rgba(150,93,42,0.92);
+  --accent-grad: linear-gradient(180deg, rgba(150,93,42,0.9290091036414566) 20%, rgba(0,0,0,1) 100%);
+  --heading-font-size: 3em;
+  --header-shadow: -4px 2px 8px rgba(74, 46, 13, 0.7);
+  --sub-heading-font-size: 2em;
+  --descript-font-size: 1.4em;
+  --sect-bg: linear-gradient(180deg ,rgba(28, 34, 45, 0.80015756302521) 0%, rgba(158,158,158,0.519) 100%);
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+*:not(rect) {
+  width: 100%;
+}
+
+html {
+  font-family: 'Alegreya Sans SC', cursive;
+  color: var(--main-text);
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+body {
+  background: #000;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+input[type=checkbox] {
+  display:none;
+}
+
+section, #title * {
+  display: none;
+}
+
+.sect__current {
+  display: block !important;
+}
+
+#title {
+  width: 100vw;
+  height: 7vh;
+  background: var(--header-bg);
+  padding-top: 1.7vh;
+  position: fixed;
+  z-index: 100;
+}
+
+#title__main {
+  width: 90vw;
+  max-width: 340px;
+  margin: 0 auto;
+  filter: drop-shadow(0px .6rem 3.1px #111);
+}
+
+#title p {
+  font-size: var(--heading-font-size);
+  text-shadow: var(--header-shadow);
+}
+
+section {
+  width: 100vw;
+  height: calc(100vh - 65px);
+  position: absolute;
+  top:0;
+}
+
+section:not(#sect__home) {
+  background: var(--sect-bg);
+  padding-top: 10vh;
+}
+
+.sect__cont {
+  height: calc(100vh - (65px + 10vh));
+}
+
+#nav__open-backdrop {
+  position: absolute;
+  top: 0; left: 0;
+  transform: translateY(calc(100% - 65px));
+  width: 100%;
+  height: 100vh;
+  z-index: 700;
+  background: #212c2c;
+  box-shadow: 12px 12px 30px #aba793 inset, 
+            -12px -12px 30px #aba793 inset;
+  opacity: .4;
+}
+
+/* - - - - ANIMATIONS - - - -  */
+
+.main__anims-trans {
+  animation-duration: 0.4s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.main__anims-transToLeft {
+  animation-name: trans-to-left;
+  animation-timing-function: ease-in;
+}
+
+.main__anims-transFromLeft {
+  transform: translateX(-100%);
+  animation-name: trans-from-left;
+  animation-timing-function: ease-out;
+}
+
+.main__anims-transToRight {
+  animation-name: trans-to-right;
+  animation-timing-function: ease-in;
+}
+
+.main__anims-transFromRight {
+  transform: translateX(100%);
+  animation-name: trans-from-right;
+  animation-timing-function: ease-out;
+}
+
+@keyframes trans-to-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes trans-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes trans-to-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to{
+    transform: translateX(100%);
+  }
+}
+
+@keyframes trans-from-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to{
+    transform: translateX(0);
+  }
+}

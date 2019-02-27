@@ -1,0 +1,14 @@
+#sect__about {
+  overflow-y: scroll;
+}
+
+#sect__about-cont {
+  width: 92vw;
+  height: auto;
+  overflow-y: scroll;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 28%);
+  font-size: var(--descript-font-size);
+  margin: 0 auto;
+  padding: 1.4em;
+  border-radius: 12px;
+}

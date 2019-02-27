@@ -1,0 +1,172 @@
+#home__container{
+  width: 100%;
+  height: auto;
+  background: linear-gradient(0deg ,rgba(28, 34, 45, 0.80015756302521) 30%, rgba(158,158,158,0.519) 40%, rgba(28, 34, 45, 0.800157563025210) 70%);
+  padding-top: 10vh;
+}
+
+.home__cont-onMusic {
+  transform: translateY(-50%)
+}
+
+#home__vids, #home__music {
+  width: 100vw;
+  height: calc(100vh - (65px + 10vh));
+  display:flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+#vids__slider-container {
+  height: 40vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#vids__slider-container iframe {
+  height: 100%;
+  display: none;
+  position: absolute;
+  top:0; left:0;
+}
+
+.vids__slider-current {
+  display: block !important;
+}
+
+#vids__descript {
+  width: 88vw;
+  height: 6vh;
+  font-size: var(--sub-heading-font-size);
+  margin-bottom: 4vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#vids__slider-controls {
+  height: 3vh;
+  line-height: 100%;
+  display: flex;
+  flex-flow: row;
+  align-content: space-around;
+}
+
+.vids__slider-arrow {
+  flex-grow: 2;
+  font-size: 1.4em;
+}
+
+#vids__locate {
+  list-style-type: none;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.vids__locate-point {
+  display: inline-block;
+  height: 100%;
+}
+
+#home__tab-spacer {
+  height: 10vh;
+}
+
+#home__tab-divider {
+  position: absolute;
+  top: 81vh;
+}
+
+.home__div-onMusic {
+  top: 112vh !important;
+}
+
+#home__tab-music, #home__tab-vids {
+  color: var(--main-text);
+  font-size: var(--sub-heading-font-size);
+  height: 5vh;
+}
+
+#home__tab-vids {
+  margin-top: 1vh;
+  /* margin-bottom: -5vh; */
+}
+
+#home__music-iframe {
+  max-width: 700px;
+  height: 48vh;
+  margin: 0 auto;
+}
+
+.home__music-descript {
+  font-size: var(--descript-font-size);
+}
+
+.spacer {
+  height: 65px;
+}
+
+  /*  - - - - - - - - - OPEN/CLOSE ANIMS- - - - - */
+
+  .home__anims {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+  }
+
+  .home__anims-shiftDivToMusic {
+    animation-name: shift-div;
+  }
+
+  .home__anims-shiftBgToMusic {
+    animation-name: shift-bg;
+  }
+
+  .home__anims-shiftDivToVids {
+    animation-name: shift-div;
+    animation-direction: reverse;
+  }
+
+  .home__anims-shiftBgToVids {
+    animation-name: shift-bg;
+    animation-direction: reverse;
+  }
+
+  .home__anims-vidDescriptFade {
+    animation: fade 0.4s linear 0s 2 alternate forwards running;
+  }
+
+  @keyframes shift-div {
+    from {
+      top: 81vh;
+    }
+
+    to {
+      top: 112vh;
+    }
+  }
+
+  @keyframes shift-bg {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @media screen and (min-height: 360px) and (orientation: landscape) {}

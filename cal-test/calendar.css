@@ -1,0 +1,104 @@
+#cal-hilites {
+  width: 100%; height: 100vh;
+  position: relative;
+  padding: 8% 0;
+  background: url('imgs/whiskeys_blue.jpg'),
+              url('imgs/back_bar.jpg'),
+              url('imgs/whiskeys.jpg');
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+#cal-overlay {
+  position: absolute;
+  z-index:99;
+  top:100vh; left:0; right:0; bottom:-100vh;
+  background: #ccc;
+  animation: reveal-slideshow 1s ease-in 1 forwards paused;
+}
+
+#cal-hilites header {
+  animation: focus 1s ease-in 1 forwards paused; 
+}
+
+#hiliter {
+  width: 100%;
+  height: calc(100% - 114px);
+  color: #424242;
+  display: grid;
+  grid-template-rows: 4fr 3px 1fr;
+}
+
+#hiliter figure {
+  max-width: 50vw;
+  background: rgb(230,230,230);
+  background: linear-gradient(180deg, rgba(230,230,230,0.7637429971988796) 0%, rgba(58,78,85,0.82) 96%);
+  color: #FAFAFA;
+  text-align: center;
+  text-shadow: 0 3px 10px #333;
+  margin: 2em;
+  border-radius: 12px;
+  justify-self: center;
+  display: grid;
+  grid: "pic head" 1fr
+        "pic desc" 1fr
+        / 3fr 3fr;
+}
+
+#hiliter figure h2 {
+  font-size: 2.6em;
+  grid-area: head;
+  align-self: center;
+}
+
+#hiliter figure img {
+  width:100%; height:100%;
+  padding: 5px;
+  border-radius: 25%;
+  align-self: center;
+  grid-area: pic;
+}
+
+#hiliter figcaption {
+  font-size: 1.5em;
+  grid-area: desc;
+  grid-row-start: 2;
+}
+
+#hiliter figcaption a {
+  color: #ce9408;
+}
+
+#date-position {
+  width: 100%; height: 3px;
+  border-radius: 1px;
+  background: rgb(212,26,0);
+  background: linear-gradient(90deg, rgba(212,26,0,1) 37%, rgba(252,176,69,1) 50%, rgba(212,26,0,1) 63%);
+}
+
+#dates {
+  list-style: none;
+  height: 100%;
+  background: rgba(242, 242, 242, 1);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+#dates li {
+  width: 100%; height:100%;
+  font-size: 2.3em;
+  text-align: center;
+  box-shadow: 3px 0 10px #848484;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.on-date {
+  color: #ce9408;
+  text-shadow: -4px 2px 6px rgba(140, 95, 40, 0.72);
+}

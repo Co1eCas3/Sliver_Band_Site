@@ -1,0 +1,24 @@
+#temp__cover {
+  display:none;
+  background: var(--sect-bg);
+  position: absolute;
+  z-index: 10000;
+  top:0; left:0;
+  width: 100%; height:100%;
+  background:#000;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#sorry {
+  font-size: var(--descript-font-size);
+  text-shadow: var(--header-shadow);
+  width: 65vw;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 500px) and (max-width:830px) and (orientation:landscape) {
+  #temp__cover {
+    display: flex;
+  }
+}

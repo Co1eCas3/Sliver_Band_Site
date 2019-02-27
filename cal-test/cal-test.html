@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calendar Testing w/ PHP</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100');
+
+    :root {
+      --header-bg: linear-gradient(180deg, rgba(84,103,103,0.80015756302521) 58%, rgba(158,158,158,0.5088410364145659) 100%);
+      --header-shadow: -4px 2px 8px rgba(140, 95, 40, 0.9);
+      --main-text: #ccc;
+      --main-text-dark: #262626;
+      --link-color: #fa8c1a;
+      --heading-font-size: 2em;
+      --sub-heading-font-size: 1.7em;
+      --sect-bg: linear-gradient(180deg ,rgba(28, 34, 45, 0.80015756302521) 0%, rgba(158,158,158,0.519) 100%);
+    }
+
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html {
+      font-family: 'Alegreya Sans SC', cursive;
+      color: var(--main-text);
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      overflow-y: hidden;
+    }
+
+    #nav-spacer {
+      width: 100%;
+      height: 65px;
+      background: lightblue;
+      position: fixed;
+      bottom:0;
+    }
+
+    #cal-hilites header {
+      font-size: var(--heading-font-size);
+      color: #fff;
+      text-shadow: var(--header-shadow);
+      width: 100vw;
+      height: 10vh;
+      padding-top: 1vh;
+      /* display: flex;
+      flex-flow: column;
+      justify-content: center; */
+      background: var(--header-bg);
+    }
+
+    main {
+      background: var(--sect-bg);
+    }
+
+  </style>
+</head>
+<body>
+  <section id="cal-hilites" style="animation-name:bg-slideshow;">
+    <header>Upcoming<br/>Events</header>
+    <main id="hiliter">
+      <figure id="date-info">
+      </figure>
+      <div id="date-position"></div>
+      <ol id="dates">
+        <li><p>7/6</p></li>
+        <li><p>7/14</p></li>
+        <li><p>7/19</p></li> 
+        <li><p>8/3</p></li>
+        <li><p>8/4</p></li>
+        <li><p>8/16</p></li>
+        <li><p>8/25</p></li>
+        <!--<li><p>10/19</p></li>-->
+      </ol>
+    </main>
+  </section>
+
+  <div id="nav-spacer"></div>
+  
+</body>
+</html>
